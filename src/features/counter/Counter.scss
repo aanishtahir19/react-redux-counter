@@ -1,0 +1,57 @@
+@import '../../index.scss';
+
+@mixin btn {
+    font-size: 2rem;
+            width: 2.5rem;
+            border: none;
+            color: $main-color;
+            height: 2.5rem;
+            // transition: 0.5s;
+            border-radius: 2px;
+            border: 2px solid transparent;
+            &:active{
+                border: 2px solid $main-color;
+            color: blue;
+            }
+}
+
+.counter {
+    .row-elements {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .incrementBtn,
+        .decrementBtn {
+            @include btn;
+        }
+
+        span {
+            color: $main-color;
+            font-size: 3rem;
+            margin: 0 40px;
+        }
+
+        #InputChange {
+            width: 3rem;
+            // height: 2rem;
+            padding: 10px 10px;
+            font-size: 1.5rem;
+            text-align: center;
+            color: $main-color;
+        }
+
+        #InputChange:focus {
+            border: 2px solid $main-color;
+        }
+        .addBtn, .subtractBtn{
+            @include btn;
+            width: initial;
+            font-size: 1.5rem;
+            margin-left: 10px;
+            padding: 5px;
+        }
+
+
+    }
+}
