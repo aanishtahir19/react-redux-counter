@@ -1,0 +1,19 @@
+version: 2.1
+
+jobs:
+  build_run:
+    docker:
+      - image: circleci/node:12
+    steps:
+      - checkout
+      - run:
+          name: Install Packages
+          command: yarn 
+      - run: 
+          name: run tests
+          command: yarn test
+
+workflows:
+  build:
+    jobs:
+      - build_run
