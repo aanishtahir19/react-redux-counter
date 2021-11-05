@@ -13,8 +13,6 @@ workflows:
     # Inside the workflow, you define the jobs you want to run.
     jobs:
       - run_test:
-          version: '16.10'
-          pkg-manager: yarn
           docker:
             - image: circleci/nide:12
           steps:
