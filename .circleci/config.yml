@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build_run:
     docker:
-      - Image: circleci/node:12
+      - image: circleci/node:12
     steps:
       - checkout
       - run:
