@@ -1,68 +1,69 @@
-@import '../../index.scss';
+@import "../../index.scss";
 
 @mixin btn {
-    font-size: 2rem;
-            width: 2.5rem;
-            border: none;
-            color: $main-color;
-            height: 2.5rem;
-            background-color: rgb(187, 186, 186);
-            border-radius: 2px;
-            border: 2px solid transparent;
-            &:active{
-                border: 2px solid $main-color;
-            color: blue;
-            }
+  font-size: 2rem;
+  width: 2.5rem;
+  border: none;
+  color: $main-color;
+  height: 2.5rem;
+  background-color: rgb(187, 186, 186);
+  border-radius: 2px;
+  border: 2px solid transparent;
+    background-color: $main-color;
+    color: white;
+  &:active {
+    border: 2px solid $main-color;
+    opacity: 0.4;
+    // color: blue;
+  }
 }
 
 .counter {
-    .row-elements {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
+  .row-elements {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 
-        .incrementBtn,
-        .decrementBtn {
-            @include btn;
-        }
-
-        span {
-            color: $main-color;
-            font-size: 3rem;
-            margin: 0 40px;
-            min-width: 4rem;
-        }
-
-        #InputChange {
-            width: 3rem;
-            // height: 2rem;
-            padding: 10px 10px;
-            font-size: 1.5rem;
-            text-align: center;
-            color: $main-color;
-        }
-
-        #InputChange:focus {
-            border: 2px solid $main-color;
-        }
-        .addBtn, .subtractBtn{
-            @include btn;
-            width: initial;
-            font-size: 1.5rem;
-            margin-left: 10px;
-            padding: 10px;
-        }
-        
-
-
+    .incrementBtn,
+    .decrementBtn {
+      @include btn;
     }
-    @media only screen and (max-width: 500px) {
-        .row-elements:nth-of-type(2){
-            flex-direction: column;
-            button{
-                margin-top: 5px;
-            }
-        }
+
+    span {
+      color: $main-color;
+      font-size: 3rem;
+      margin: 0 40px;
+      min-width: 4rem;
     }
+
+    #InputChange {
+      width: 3rem;
+      // height: 2rem;
+      padding: 10px 10px;
+      font-size: 1.5rem;
+      text-align: center;
+      color: $main-color;
+    }
+
+    #InputChange:focus {
+      border: 2px solid $main-color;
+    }
+    .addBtn,
+    .subtractBtn {
+      @include btn;
+      width: initial;
+      font-size: 1.5rem;
+      margin-left: 10px;
+      padding: 0.5rem 1rem;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    .row-elements:nth-of-type(2) {
+      flex-direction: column;
+      button {
+        margin-top: 5px;
+      }
+    }
+  }
 }
