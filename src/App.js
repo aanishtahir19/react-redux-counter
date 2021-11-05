@@ -2,7 +2,7 @@
 import './App.scss';
 import logo from './logo.svg'
 // Importing Components
-import {Counter} from './features/counter/Counter';
+import Counter from './features/counter/Counter';
 
 function App() {
   return (

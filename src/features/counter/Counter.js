@@ -2,7 +2,7 @@ import './Counter.scss'
 import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
 import {increment, decrement, incrementByAmount, decrementByAmount} from './counterSlice';
-export function Counter() {
+export default function Counter() {
   const count = useSelector(state=> state.counter.value);
   const dispatch = useDispatch();
   const [amount, setAmount] = useState(0);
@@ -23,11 +23,12 @@ export function Counter() {
       <div className="row-elements">
         <button
           className="incrementBtn"
+          data-testid="incrementBtn"
           onClick={()=> dispatch(increment())}
         >
           +
         </button>
-        <span>{count}</span>
+        <span data-testid="count">{count}</span>
         <button
           className="decrementBtn"
           onClick={()=> checkDecrement()}
